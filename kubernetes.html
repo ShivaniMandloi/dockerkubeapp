@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+    <link rel="stylesheet" href="kube.css">
+</head>
+<body>
+    <div class="page">
+        <label class="field field_v1" style="color: white;">Enter your command</label><br><br>
+          <input class="field_input" id="input" style="color: rgb(207, 204, 204);"></input>
+          <button type="submit" onclick="askinput();" class="lnr lnr-arrow-right white "></button>
+    </div>
+      
+    <div class="split">
+        <div class="output-container">
+          <div class="screen-body-item">
+            <div class="app-title">
+              Output comes here
+            </div>
+            <pre>
+            <div class="output-block" id="out">output</div>
+            </pre>
+            </div>
+          </div>
+        </div>
+    </div>
+      
+        <div id="1k" class="modal">
+          <form class="modal-content animate" method="post">
+              <div class="container">
+                <label for="podname" style="color:teal ;"><b>Pod Name</b></label>
+                <input id="1k-p" type="text" placeholder="Enter name of pod" name="pod-name" required>
+              </div>
+              <div class="container">
+                <label for="image" style="color:teal ;" ><b>Image</b></label>
+                <input id="1k-i"type="text" placeholder="Enter name of image" name="image" required>
+              </div> 
+              <div class="container-submit">
+                <script src="kubernetes.js"></script>    
+                <button type="submit" onclick="document.getElementById('1k').style.display='none'">Submit</button>
+              </div>  
+            <div class="container">
+              <button type="button" onclick="document.getElementById('1k').style.display='none'" class="cancelbtn">Cancel</button>
+            </div>
+          </form>
+        </div>
+        <script src="kubernetes.js"></script>    
+</body>        
